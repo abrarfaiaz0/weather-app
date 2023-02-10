@@ -8,7 +8,7 @@ import styles from "@/styles/Home.module.css";
 import { useContext, useState } from "react";
 
 export default function Home() {
-  const [location, setLocation] = useState("London");
+  const [location, setLocation] = useState();
 
   function changeLocation(location) {
     setLocation(location);
@@ -24,7 +24,8 @@ export default function Home() {
 
       {/* <Nav /> */}
       <main className={styles.main}>
-        <Search changeLocation={changeLocation} />
+        <Search changeLocation={changeLocation} location={location} />
+        <div>{location}</div>
         <Cards location={location} />
       </main>
       {/* <Footer /> */}
