@@ -8,7 +8,7 @@ import styles from "@/styles/Home.module.css";
 import { useContext, useState } from "react";
 
 export default function Home() {
-  const [location, setLocation] = useState();
+  const [location, setLocation] = useState("london");
 
   function changeLocation(location) {
     setLocation(location);
