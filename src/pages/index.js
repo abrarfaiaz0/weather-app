@@ -24,11 +24,9 @@ export default function Home() {
 
       <main className={styles.main}>
         <Nav />
-
         <Search changeLocation={changeLocation} location={location} />
         <div>{location}</div>
         <Cards location={location} />
-
         <Footer />
       </main>
     </>
