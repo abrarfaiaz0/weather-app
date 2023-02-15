@@ -16,8 +16,12 @@ function Cards(props) {
   ];
 
   useEffect(() => {
-    getWeather(props.location);
+    changeWeather(props.location);
   }, [props.location]);
+
+  function changeWeather(l) {
+    getWeather(l);
+  }
 
   async function getWeather(location) {
     const response = await fetch(
