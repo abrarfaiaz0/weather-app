@@ -4,6 +4,7 @@ function Cards(props) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [found, setFound] = useState(false);
+
   const arr_ = [
     "Latitude",
     "Longitude",
