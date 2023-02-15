@@ -22,13 +22,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <Nav /> */}
       <main className={styles.main}>
+        <Nav />
+
         <Search changeLocation={changeLocation} location={location} />
         <div>{location}</div>
         <Cards location={location} />
+
+        <Footer />
       </main>
-      {/* <Footer /> */}
     </>
   );
 }
