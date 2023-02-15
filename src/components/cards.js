@@ -16,17 +16,21 @@ function Cards(props) {
     "Summary",
   ];
 
+  useEffect(() => console.log(data), [data]);
   useEffect(() => {
     getWeather(props.location);
   }, [props.location]);
 
   async function getWeather(location) {
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=36c242e887542108b600f50e82927a05&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=36c242e887542108b600f50e82927a05&units=metric`
     );
     const json = await response.json();
-    setFound(!(json.cod === 404));
-    if (!(json.cod === 404)) {
+
+    if (json.cod === 200) setFound(true);
+    else setFound(false);
+
+    if (found) {
       const temp_arr = [];
       const lat = json.coord.lat;
       const lon = json.coord.lon;
@@ -49,7 +53,7 @@ function Cards(props) {
       setLoading(false);
       setData(temp_arr);
       console.log(data);
-    } else setFound(false);
+    }
   }
 
   if (!found) return <div>city not found</div>;

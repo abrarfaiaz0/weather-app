@@ -10,10 +10,7 @@ function Search(props) {
   return (
     <div className={styles.search}>
       <input onInput={(e) => setLocation(e)} />
-      <button onClick={() => props.changeLocation(props.location)}>
-        {" "}
-        Search{" "}
-      </button>
+      <button onClick={() => props.changeLocation(location)}>Search</button>
     </div>
   );
 }
