@@ -16,12 +16,8 @@ function Cards(props) {
   ];
 
   useEffect(() => {
-    changeWeather(props.location);
+    getWeather(props.location);
   }, [props.location]);
-
-  function changeWeather(l) {
-    getWeather(l);
-  }
 
   async function getWeather(location) {
     const response = await fetch(
@@ -63,7 +59,7 @@ function Cards(props) {
       <div>
         {data.map((record, i) => {
           return (
-            <div>
+            <div key={i}>
               {arr_[i]} : {record}
             </div>
           );
