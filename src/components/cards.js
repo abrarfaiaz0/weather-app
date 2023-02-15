@@ -22,7 +22,7 @@ function Cards(props) {
 
   async function getWeather(location) {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=36c242e887542108b600f50e82927a05&units=metric`
+      `http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=36c242e887542108b600f50e82927a05&units=metric`
     );
     const json = await response.json();
     setFound(!(json.cod === 404));
