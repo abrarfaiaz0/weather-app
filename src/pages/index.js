@@ -8,7 +8,7 @@ import styles from "@/styles/Home.module.css";
 import { useState } from "react";
 
 export default function Home() {
-  const [location, setLocation] = useState("london");
+  const [location, setLocation] = useState("");
   const [found, setFound] = useState(false);
 
   function changeLocation(location) {
@@ -26,7 +26,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={found ? styles.found : styles.notfound}>
+      <main className={found ? styles.mainfound : styles.mainnotfound}>
         <Nav />
         <Search changeLocation={changeLocation} location={location} />
         <div>{location}</div>

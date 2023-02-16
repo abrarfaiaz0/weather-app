@@ -1,4 +1,4 @@
-.found {
+.mainfound {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,10 +7,10 @@
   background-image: url("/assets/bg-2.png");
   background-position: center;
   background-repeat: no-repeat;
-  color: wheat;
-  transition: all 0.5s ease-out;
+  color: rgb(167, 0, 130);
+  transition: all 0.5s ease-in-out;
 }
-.notfound {
+.mainnotfound {
   display: flex;
   flex-direction: column;
   align-items: center;

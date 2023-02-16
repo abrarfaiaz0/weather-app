@@ -54,6 +54,7 @@ function Cards(props) {
       props.changeFound(false);
     }
   }
+  if (props.location === "") return <div>Enter a City to Begin </div>;
 
   if (loading) return <div>Loading . . .</div>;
   else {
