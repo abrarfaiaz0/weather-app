@@ -26,7 +26,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main className={found ? styles.found : styles.notfound}>
         <Nav />
         <Search changeLocation={changeLocation} location={location} />
         <div>{location}</div>
