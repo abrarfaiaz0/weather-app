@@ -7,10 +7,15 @@ function Search(props) {
   }
 
   return (
-    <>
-      <input onInput={(e) => setLocation(e)} />
+    <div className={styles.search}>
+      <input
+        onInput={(e) => setLocation(e)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") props.changeLocation(location);
+        }}
+      />
       <button onClick={() => props.changeLocation(location)}> Search </button>
-    </>
+    </div>
   );
 }
 
