@@ -5,13 +5,17 @@ import Search from "../components/search";
 import Cards from "../components/cards";
 import Footer from "../components/footer";
 import styles from "@/styles/Home.module.css";
-import { useContext, useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const [location, setLocation] = useState("london");
+  const [found, setFound] = useState(false);
 
   function changeLocation(location) {
     setLocation(location);
+  }
+  function changeFound(found) {
+    setFound(found);
   }
   return (
     <>
@@ -26,7 +30,7 @@ export default function Home() {
         <Nav />
         <Search changeLocation={changeLocation} location={location} />
         <div>{location}</div>
-        <Cards location={location} />
+        <Cards location={location} changeFound={changeFound} found={found} />
         <Footer />
       </main>
     </>

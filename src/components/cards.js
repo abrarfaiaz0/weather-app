@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 function Cards(props) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [found, setFound] = useState(false);
+
   const arr_ = [
     "Latitude",
     "Longitude",
@@ -17,9 +17,6 @@ function Cards(props) {
 
   useEffect(() => {
     getWeather(props.location);
-  }, []);
-  useEffect(() => {
-    getWeather(props.location);
   }, [props.location]);
 
   async function getWeather(location) {
@@ -27,7 +24,9 @@ function Cards(props) {
       `http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=36c242e887542108b600f50e82927a05&units=metric`
     );
     const json = await response.json();
-    setFound(json.cod === 200);
+
+    props.changeFound(json.cod === 200);
+
     if (json.cod === 200) {
       const temp_arr = [];
       const lat = json.coord.lat;
@@ -51,12 +50,14 @@ function Cards(props) {
       setLoading(false);
       setData(temp_arr);
       console.log(data);
-    } else setFound(false);
+    } else {
+      props.changeFound(false);
+    }
   }
 
-  if (!found) return <div>city not found</div>;
+  if (loading) return <div>Loading . . .</div>;
   else {
-    if (loading) return <div> Loading... </div>;
+    if (!props.found) return <div> City not found </div>;
 
     return (
       <div>
