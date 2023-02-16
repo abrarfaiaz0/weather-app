@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 function Cards(props) {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const arr_ = [
     "Latitude",
@@ -28,6 +28,7 @@ function Cards(props) {
     props.changeFound(json.cod === 200);
 
     if (json.cod === 200) {
+      setLoading(true);
       const temp_arr = [];
       const lat = json.coord.lat;
       const lon = json.coord.lon;
@@ -47,9 +48,9 @@ function Cards(props) {
       temp_arr.push(pressure);
       temp_arr.push(weather);
 
-      setLoading(false);
       setData(temp_arr);
       console.log(data);
+      setLoading(false);
     } else {
       props.changeFound(false);
     }
