@@ -1,7 +1,18 @@
 import styles from "@/styles/Footer.module.css";
 
 function Footer() {
-  return <div className={styles.footer}>Footer</div>;
+  return (
+    <div className={styles.footer}>
+      <span>Created by Abrar Faiaz Atuno</span>•
+      <a
+        className={styles.link}
+        href="https://www.github.com/abrarfaiaz0"
+        target="_blank"
+      >
+        Github
+      </a>
+    </div>
+  );
 }
 
 export default Footer;

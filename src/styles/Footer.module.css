@@ -1,3 +1,17 @@
 .footer {
   margin-top: auto;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  font-size: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: white;
+}
+
+.link {
+  color: gold;
 }

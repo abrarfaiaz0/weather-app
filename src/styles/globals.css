@@ -2,6 +2,10 @@
   font-family: lato;
   src: url("/assets/fonts/Lato-Regular.ttf");
 }
+@font-face {
+  font-family: playfairdisplay;
+  src: url("/assets/fonts/PlayfairDisplay-BoldItalic.ttf");
+}
 
 body {
   margin: 0;

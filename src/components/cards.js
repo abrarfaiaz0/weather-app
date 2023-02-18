@@ -1,19 +1,10 @@
 import { useEffect, useState } from "react";
+import Weather from "./weather";
+import Notfound from "./notfound";
 
 function Cards(props) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
-
-  const arr_ = [
-    "Latitude",
-    "Longitude",
-    "Country",
-    "Temperature",
-    "Feels like",
-    "Humidity",
-    "Pressure",
-    "Summary",
-  ];
 
   useEffect(() => {
     getWeather(props.location);
@@ -54,22 +45,17 @@ function Cards(props) {
       props.changeFound(false);
     }
   }
-  if (props.location === "") return <div>Enter a City to Begin </div>;
+  if (props.location === "") return <Notfound status="empty" />;
 
-  if (loading) return <div>Loading . . .</div>;
+  if (loading) return <Notfound status="loading" />;
   else {
-    if (!props.found) return <div> City not found </div>;
+    if (!props.found) return <Notfound status="notfound" />;
 
     return (
-      <div>
-        {data.map((record, i) => {
-          return (
-            <div key={i}>
-              {arr_[i]} : {record}
-            </div>
-          );
-        })}
-      </div>
+      // <div>
+      //
+      // </div>
+      <Weather data={data} />
     );
   }
 }

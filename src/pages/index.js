@@ -28,8 +28,11 @@ export default function Home() {
 
       <main className={found ? styles.mainfound : styles.mainnotfound}>
         <Nav />
-        <Search changeLocation={changeLocation} location={location} />
-        <div>{location}</div>
+        <Search
+          changeLocation={changeLocation}
+          location={location}
+          found={found}
+        />
         <Cards location={location} changeFound={changeFound} found={found} />
         <Footer />
       </main>
