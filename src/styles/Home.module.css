@@ -5,10 +5,11 @@
 
   height: 100vh;
   background-image: url("/assets/bg-2.png");
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   color: rgb(167, 0, 130);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 .mainnotfound {
   display: flex;
@@ -17,8 +18,9 @@
 
   height: 100vh;
   background-image: url("/assets/bg-1.png");
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   color: wheat;
-  transition: all 0.5s ease-out;
+  transition: all 0.8s ease-out;
 }
