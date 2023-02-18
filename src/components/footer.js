@@ -8,6 +8,7 @@ function Footer() {
         className={styles.link}
         href="https://www.github.com/abrarfaiaz0"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Github
       </a>
