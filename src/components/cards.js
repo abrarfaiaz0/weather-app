@@ -55,7 +55,7 @@ function Cards(props) {
       // <div>
       //
       // </div>
-      <Weather data={data} />
+      <Weather data={data} location={props.location} />
     );
   }
 }
