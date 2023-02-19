@@ -6,6 +6,10 @@
   font-family: playfairdisplay;
   src: url("/assets/fonts/PlayfairDisplay-BoldItalic.ttf");
 }
+@font-face {
+  font-family: LobsterTwo-Bold;
+  src: url("/assets/fonts/LobsterTwo-Bold.ttf");
+}
 
 body {
   margin: 0;
