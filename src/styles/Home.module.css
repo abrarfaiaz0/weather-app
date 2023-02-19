@@ -2,10 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   height: 100vh;
   background-image: url("/assets/bg-2.png");
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: rgb(167, 0, 130);
@@ -15,10 +14,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   height: 100vh;
   background-image: url("/assets/bg-1.png");
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: wheat;
