@@ -28,8 +28,13 @@
 }
 .flex1 {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   padding: 30px;
+}
+.icon {
+  width: 20%;
+  filter: invert(100%);
 }
 .flex2 {
   display: flex;
