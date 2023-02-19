@@ -9,6 +9,7 @@
   background-repeat: no-repeat;
   color: rgb(167, 0, 130);
   transition: all 0.8s ease-in-out;
+  gap: 40px;
 }
 .mainnotfound {
   display: flex;
@@ -21,4 +22,5 @@
   background-repeat: no-repeat;
   color: wheat;
   transition: all 0.8s ease-out;
+  gap: 40px;
 }
