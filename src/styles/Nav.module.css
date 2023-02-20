@@ -1,6 +1,23 @@
 .nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+.span {
   color: white;
   font-size: 60px;
   font-family: LobsterTwo-Bold;
-  margin-top: 30px;
+}
+
+@media (max-width: 899px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 0px;
+  }
 }

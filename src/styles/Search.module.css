@@ -54,3 +54,12 @@
   outline: 0;
   box-shadow: 5px 5px 10px wheat;
 }
+@media (max-width: 899px) {
+  .input {
+    width: 80vw;
+  }
+
+  .inputnotfound {
+    width: 80vw;
+  }
+}
