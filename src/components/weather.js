@@ -16,12 +16,11 @@ function Weather(props) {
       <div className={styles.summary}>
         <div className={styles.sum}>
           <div className={styles.flex1}>
-            <div>
-              <img
-                className={styles.icon}
-                src={`/assets/icons/${props.data[7]}.png`}
-              ></img>
-            </div>
+            <img
+              className={styles.icon}
+              src={`/assets/icons/${props.data[7]}.png`}
+            ></img>
+
             <div className={styles.flex2}>
               <div className={styles.big}>{props.data[3]}°C</div>
               <div className={styles.text}>{props.data[7]}</div>
