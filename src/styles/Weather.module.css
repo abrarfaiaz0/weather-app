@@ -115,6 +115,9 @@
     flex-direction: column;
     align-items: center;
   }
+  .flex2 {
+    align-items: center;
+  }
   .icon {
     width: 30%;
   }
